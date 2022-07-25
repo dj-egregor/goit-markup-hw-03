@@ -49,7 +49,6 @@ body {
 }
 
 .container {
-    /* text-align: center; */
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -62,9 +61,13 @@ body {
     border-bottom: 1px solid var(--header-border-color);
 }
 
+.header-flex {
+    display: flex;
+}
+
 /* web logo */
 .weblogo {
-    display: block;
+    display: inline-block;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -72,10 +75,23 @@ body {
     letter-spacing: 0.03em;
     color: var(--weblogo-color);
     text-decoration: none;
-    padding: 0px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
-.weblogo-footer {
+.weblogo-footer,
+.weblogo-link {
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: var(--weblogo-color);
+    text-decoration: none;
+}
+
+.weblogo-link {
     margin-bottom: 20px;
 }
 
@@ -96,9 +112,13 @@ body {
 
 .main-nav-item {
     margin-left: 50px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .main-nav-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
@@ -124,22 +144,14 @@ body {
 
 /*--------------------------------------- Header */
 .header-contacts {
+    padding-top: 32px;
+    padding-bottom: 32px;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--text-p-color-default);
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    padding-top: 24px;
-    padding-bottom: 25px;
-}
-.pa ge-header {
-    /* margin: 0px auto; */
 }
 
 .main-title {
@@ -191,11 +203,6 @@ body {
 
 /* benefits */
 
-.section-benefits {
-    padding-top: 42px;
-    padding-bottom: 0px;
-}
-
 .benefits {
     display: flex;
     gap: 30px;
@@ -229,6 +236,14 @@ body {
     gap: 30px;
 }
 
+.speciality-image,
+.portfolio-item img,
+.team-card-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .speciality-header {
     text-align: center;
     font-weight: 700;
@@ -237,6 +252,10 @@ body {
     letter-spacing: 0.03em;
     color: var(--headings-text-color-default);
     margin-bottom: 50px;
+}
+
+.speciality {
+    padding-top: 0;
 }
 
 /* Team */
@@ -266,8 +285,12 @@ body {
     border-radius: 0px 0px 4px 4px;
 }
 
+.team-card-text-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 .full-name {
-    margin-top: 30px;
     margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
@@ -278,7 +301,7 @@ body {
 }
 
 .team-card-text {
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
@@ -289,13 +312,9 @@ body {
 /* -------------------Footer---------------------- */
 
 footer {
-    margin: 0px auto;
-    background-color: var(--footer-background-color);
-}
-
-.footer-div {
     padding-top: 60px;
     padding-bottom: 60px;
+    background-color: var(--footer-background-color);
 }
 
 .footer-contacts-item {
@@ -418,8 +437,4 @@ footer {
     border-left: 1px solid var(--border-item-list-color);
     border-right: 1px solid var(--border-item-list-color);
     border-bottom: 1px solid var(--border-item-list-color);
-}
-
-.portfolio-item img {
-    display: block;
 }
